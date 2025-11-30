@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 5 - Exercice 1 : Détection du type d'une variable</title>
+</head>
+<body>
+    <h1>TP 5 - Exercice 1 : Détection du type d'une variable</h1>
+    <pre id="output"></pre>
+
+    <script>
+        let x = "150";
+        let y = 150;
+        let z = true;
+        console.log("=== Types des variables ===");
+        console.log("Type de x :", typeof x);
+        console.log("Type de y :", typeof y);
+        console.log("Type de z :", typeof z); 
+        let xConverti = Number(x);
+        console.log("x converti :", xConverti);
+        console.log("Type de xConverti :", typeof xConverti); 
+        let explication = `
+        `;
+        
+        console.log(explication);
+        
+        // Afficher aussi dans la page HTML
+        let output = document.getElementById('output');
+        output.textContent = `
+Exercice 1 - Résultats
+
+1. Types originaux :
+   x = "150" → type: ${typeof x}
+   y = 150 → type: ${typeof y}
+   z = true → type: ${typeof z}
+
+2. Conversion de x en nombre :
+   xConverti = Number("150") = ${xConverti} → type: ${typeof xConverti}
+
+3. Explication :
+JavaScript est dynamiquement typé :
+- Les variables peuvent changer de type
+- Conversions possibles entre types (string → number)
+- Le type est déterminé à l'exécution
+- Offre flexibilité mais demande attention
+        `;
+    </script>
+</body>
+</html>
